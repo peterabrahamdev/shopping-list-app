@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
 import { Recipe } from '../recipe.model';
+import { RecipeItemComponent } from "./recipe-item/recipe-item.component";
 @Component({
-  selector: 'app-recipe-list',
-  templateUrl: './recipe-list.component.html',
-  styleUrl: './recipe-list.component.css'
+    selector: 'app-recipe-list',
+    templateUrl: './recipe-list.component.html',
+    styleUrl: './recipe-list.component.css',
+    standalone: true,
+    imports: [RecipeItemComponent]
 })
 export class RecipeListComponent {
   recipes: Recipe[] = [
