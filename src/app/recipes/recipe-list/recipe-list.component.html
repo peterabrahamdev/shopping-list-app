@@ -5,21 +5,9 @@
 </div>
 <hr />
 <div class="list-group">
-  @for(recipe of recipes; track recipe.name){
-  <a href="#" class="list-group-item list-group-item-action">
-    <div class="float-start">
-      <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
-      <p class="list-group-item-text">{{ recipe.description }}</p>
-    </div>
-    <span class="float-end">
-      <img
-        [src]="recipe.imagePath"
-        alt="{{ recipe.name }}"
-        class="img-fluid"
-        style="max-height: 50px"
-      />
-    </span>
+  @for(recipeElement of recipes; track recipeElement.name){
+  <a href="" class="list-group-item list-group-item-action">
+    <app-recipe-item [recipe]="recipeElement"></app-recipe-item>
   </a>
   }
-  <app-recipe-item></app-recipe-item>
 </div>
