@@ -13,7 +13,10 @@
       </div>
       <div class="row">
         <div class="col-12 mt-2">
-          <button class="btn btn-success me-2" (click)="onAddItem(); false">
+            <!-- Here we add false after click's function so that we don't trigger a page reload
+            which is the basic functionality of the form submit.
+            Could also add event.preventDefault() in the onAddItem() function's body -->
+          <button class="btn btn-success me-2" (click)="onAddItem(); (false)">
             Add
           </button>
           <button class="btn btn-danger me-2" type="button">Delete</button>

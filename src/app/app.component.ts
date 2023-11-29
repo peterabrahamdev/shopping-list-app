@@ -3,6 +3,7 @@ import { HeaderComponent } from './header/header.component';
 import { RecipesComponent } from "./recipes/recipes.component";
 import { ShoppingListComponent } from "./shopping-list/shopping-list.component";
 import { RouterModule, RouterOutlet } from '@angular/router';
+import { DropdownDirective } from './shared/dropdown.directive';
 
 
 @Component({
@@ -10,7 +11,7 @@ import { RouterModule, RouterOutlet } from '@angular/router';
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
     standalone: true,
-    imports: [HeaderComponent, RecipesComponent, ShoppingListComponent, RouterModule, RouterOutlet]
+    imports: [HeaderComponent, RecipesComponent, ShoppingListComponent, RouterModule, RouterOutlet, DropdownDirective]
 })
 export class AppComponent {
   title = 'shopping-list-app';
